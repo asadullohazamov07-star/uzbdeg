@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZBdeg | Dasturchilar olami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header class="header">
+    <a href="#" class="logo" onclick="showHome()">UZB<span>deg</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#" onclick="showHome()">Bosh sahifa</a>
+      <a href="#sections">Yo‘nalishlar</a>
+      <a href="https://t.me/UZBEdasturchilarguruhi" target="_blank">Telegram</a>
+    </nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="tag">UZBEKISTAN DEVELOPER COMMUNITY</p>
+      <h1>Kelajakni <span>kod bilan</span> yarating</h1>
+      <p class="hero-text">
+        Kiberxavfsizlik, dasturlash va yangi loyihalar olamiga xush kelibsiz.
+      </p>
+      <a href="#sections" class="main-btn">Boshlash <span>↗</span></a>
+    </section>
+
+    <section class="sections" id="sections">
+      <div class="section-heading">
+        <p class="tag">BILIMDAN BOSHLANADI</p>
+        <h2>O‘z yo‘nalishingizni tanlang</h2>
+        <p>O‘rganing, izlaning va o‘z loyihalaringizni yarating.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card" onclick="openSection('cyber')">
+          <div class="card-icon">⌘</div>
+          <p class="number">01 / SECURITY</p>
+          <h3>Kiberxavfsizlik</h3>
+          <p>Tarmoqlar, tizimlar va ma’lumotlarni himoya qilishni o‘rganing.</p>
+          <button class="card-btn">Bo‘limni ochish ↗</button>
+        </article>
+
+        <article class="card" onclick="openSection('coding')">
+          <div class="card-icon">&lt;/&gt;</div>
+          <p class="number">02 / DEVELOPMENT</p>
+          <h3>Dasturlash</h3>
+          <p>Web, Python, JavaScript va boshqa texnologiyalarni o‘rganing.</p>
+          <button class="card-btn">Bo‘limni ochish ↗</button>
+        </article>
+
+        <article class="card" onclick="openSection('projects')">
+          <div class="card-icon">◈</div>
+          <p class="number">03 / INNOVATION</p>
+          <h3>Dasturlash loyihalari</h3>
+          <p>Amaliy loyihalar, g‘oyalar va portfolio yaratish yo‘llari.</p>
+          <button class="card-btn">Bo‘limni ochish ↗</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="details" class="details hidden">
+      <button class="back-btn" onclick="showHome()">← Orqaga</button>
+      <p class="tag" id="detailTag">UZBDEG / RESOURCES</p>
+      <h2 id="detailTitle">Bo‘lim</h2>
+      <p id="detailDescription"></p>
+      <input id="searchInput" type="text" placeholder="Resurslarni qidirish..."
+        oninput="filterResources()">
+      <div id="resourceList" class="resource-list"></div>
+    </section>
+
+    <section class="community">
+      <p class="tag">BIRGALIKDA RIVOJLANAMIZ</p>
+      <h2>UZBdeg hamjamiyatiga qo‘shiling</h2>
+      <p>Bilim almashing, savol bering va dasturchilar bilan muloqot qiling.</p>
+      <a class="main-btn" href="https://t.me/UZBEdasturchilarguruhi"
+        target="_blank">Telegram guruhiga qo‘shilish ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">UZB<span>deg</span></a>
+    <p>© 2026 UZBdeg — Bilim. Kod. Kelajak.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
